@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8088b455adb807a41a17e0cc42c051b8, type: 3}
+  m_Name: PipeWeapon
+  m_EditorClassIdentifier: 
+  itemType: 0
+  slotType: 0
+  itemName: Pipe
+  itemId: pipe_weapon
+  icon: {fileID: 21300000, guid: bf64bc33e9358d64f8a04be72632cb26, type: 3}
+  isStackable: 0
+  maxStackSize: 1
+  lore: "\u041E\u0431\u044B\u0447\u043D\u0430\u044F \u0442\u044F\u0436\u0435\u043B\u0430\u044F
+    \u0442\u0440\u0443\u0431\u0430. \u041D\u0438\u0447\u0435\u043C \u043D\u0435 \u043F\u0440\u0438\u043C\u0435\u0447\u0430\u0442\u0435\u043B\u044C\u043D\u0430,
+    \u043D\u043E \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C \u043E\u0440\u0443\u0436\u0438\u0435\u043C,
+    \u0435\u0441\u043B\u0438 \u043E\u0447\u0435\u043D\u044C \u043F\u043E\u0441\u0442\u0430\u0440\u0430\u0442\u044C\u0441\u044F."
+  worldModelPrefab: {fileID: 6653810997559254288, guid: 20867daa62a585a41add75367225812a, type: 3}
+  equipPrefab: {fileID: 5677815890504583273, guid: 3a680a13b63af864d860a10d2fbeeea5, type: 3}
+  weaponStats:
+    damage: 14
+    attackSpeed: 1
+    range: 3
+  armorStats:
+    defense: 0
+    weight: 0
+    durability: 0

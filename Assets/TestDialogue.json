@@ -1,0 +1,89 @@
+{
+    "dialogueId": "testDialogue",
+    "nodes": [
+        {
+            "id": "start",
+            "text": "Привет, путник! Могу ли я чем-то помочь?",
+            "options": [
+                {
+                    "text": "Что ты здесь делаешь?",
+                    "nextNode": "about_shop"
+                },
+                {
+                    "text": "Есть ли для меня работа?",
+                    "nextNode": "quest_offer"
+                }
+            ],
+            "givesQuest": false,
+            "questData": {
+                "questId": "",
+                "title": "",
+                "description": "",
+                "objectives": []
+            }
+        },
+        {
+            "id": "about_shop",
+            "text": "Я кую механизмы для воздушных кораблей...",
+            "options": [
+                {
+                    "text": "Понятно.",
+                    "nextNode": ""
+                }
+            ],
+            "givesQuest": false,
+            "questData": {
+                "questId": "",
+                "title": "",
+                "description": "",
+                "objectives": []
+            }
+        },
+        {
+            "id": "quest_offer",
+            "text": "Да со здоровьем беда... Надеюсь,что не помру от хвори. \\n Мог бы ты принести мне зелёной эссенции",
+            "options": [
+                {
+                    "text": "Да, я могу раздобыть.",
+                    "nextNode": "accept_quest"
+                },
+                {
+                    "text": "Не сейчас.",
+                    "nextNode": ""
+                }
+            ],
+            "givesQuest": false,
+            "questData": {
+                "questId": "",
+                "title": "",
+                "description": "",
+                "objectives": []
+            }
+        },
+        {
+            "id": "accept_quest",
+            "text": "Здорово!",
+            "options": [
+                {
+                    "text": "[Выход]",
+                    "nextNode": ""
+                }
+            ],
+            "givesQuest": true,
+            "questData": {
+                "questId": "heal_potions_trader",
+                "title": "Лечение торговца",
+                "description": "Принесите торговцу 1 зеленую эссенцию",
+                "objectives": [
+                    {
+                        "type": 0,
+                        "targetId": "heal_potion",
+                        "targetNPCId": "",
+                        "requiredAmount": 1,
+                        "description": "Зеленая эссенция"
+                    }
+                ]
+            }
+        }
+    ]
+}

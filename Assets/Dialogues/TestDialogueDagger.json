@@ -1,0 +1,89 @@
+{
+    "dialogueId": "testDialogueDagger",
+    "nodes": [
+        {
+            "id": "start",
+            "text": "Ну, привет.",
+            "options": [
+                {
+                    "text": "Что ты здесь делаешь?",
+                    "nextNode": "about"
+                },
+                {
+                    "text": "Как я выгляжу?",
+                    "nextNode": "quest_offer"
+                }
+            ],
+            "givesQuest": false,
+            "questData": {
+                "questId": "",
+                "title": "",
+                "description": "",
+                "objectives": []
+            }
+        },
+        {
+            "id": "about",
+            "text": "Готовлю план ограбления склада.",
+            "options": [
+                {
+                    "text": "Звучит захватывающе.",
+                    "nextNode": ""
+                }
+            ],
+            "givesQuest": false,
+            "questData": {
+                "questId": "",
+                "title": "",
+                "description": "",
+                "objectives": []
+            }
+        },
+        {
+            "id": "quest_offer",
+            "text": "Тебя сможет ограбить любой бомж. Найди себе клинок.",
+            "options": [
+                {
+                    "text": "Неужели всё совсем так плохо?",
+                    "nextNode": "accept_quest"
+                },
+                {
+                    "text": "Не сейчас.",
+                    "nextNode": ""
+                }
+            ],
+            "givesQuest": false,
+            "questData": {
+                "questId": "",
+                "title": "",
+                "description": "",
+                "objectives": []
+            }
+        },
+        {
+            "id": "accept_quest",
+            "text": "На крыше",
+            "options": [
+                {
+                    "text": "[Выход]",
+                    "nextNode": ""
+                }
+            ],
+            "givesQuest": true,
+            "questData": {
+                "questId": "dagger_test",
+                "title": "Вооружись",
+                "description": "Найди оружие",
+                "objectives": [
+                    {
+                        "type": 0,
+                        "targetId": "poor_killer_dagger",
+                        "targetNPCId": "",
+                        "requiredAmount": 1,
+                        "description": "Клинок бедняка."
+                    }
+                ]
+            }
+        }
+    ]
+}

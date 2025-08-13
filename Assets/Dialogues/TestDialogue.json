@@ -1,0 +1,101 @@
+{
+    "dialogueId": "testDialogue",
+    "nodes": [
+        {
+            "id": "start",
+            "text": "Ну, привет.",
+            "options": [
+                {
+                    "text": "Что ты здесь делаешь?",
+                    "nextNode": "about",
+                    "questIdCondition": "",
+                    "hideIfQuestIssuedOrCompleted": false
+                },
+                {
+                    "text": "Как я выгляжу?",
+                    "nextNode": "quest_offer",
+                    "questIdCondition": "",
+                    "hideIfQuestIssuedOrCompleted": false
+                }
+            ],
+            "givesQuest": false,
+            "questData": {
+                "questId": "",
+                "title": "",
+                "description": "",
+                "objectives": []
+            }
+        },
+        {
+            "id": "about",
+            "text": "Готовлю план ограбления склада.",
+            "options": [
+                {
+                    "text": "Звучит захватывающе.",
+                    "nextNode": "",
+                    "questIdCondition": "",
+                    "hideIfQuestIssuedOrCompleted": false
+                }
+            ],
+            "givesQuest": false,
+            "questData": {
+                "questId": "",
+                "title": "",
+                "description": "",
+                "objectives": []
+            }
+        },
+        {
+            "id": "quest_offer",
+            "text": "Неважно... Сходи раздобудь себе зеленой эссенции пока не помер. \\nСзади меня здание – склад-таможенная, а на крыше этого здания лежат эссенции. ",
+            "options": [
+                {
+                    "text": "Неужели всё совсем так плохо?",
+                    "nextNode": "accept_quest",
+                    "questIdCondition": "heal_potions_test",
+                    "hideIfQuestIssuedOrCompleted": true
+                },
+                {
+                    "text": "Не сейчас.",
+                    "nextNode": "",
+                    "questIdCondition": "",
+                    "hideIfQuestIssuedOrCompleted": false
+                }
+            ],
+            "givesQuest": false,
+            "questData": {
+                "questId": "",
+                "title": "",
+                "description": "",
+                "objectives": []
+            }
+        },
+        {
+            "id": "accept_quest",
+            "text": "Да. Но советую, быть осторожнее, так как склад охраняемый. На втором этаже и крыше находятся стражи.",
+            "options": [
+                {
+                    "text": "[Выход]",
+                    "nextNode": "",
+                    "questIdCondition": "",
+                    "hideIfQuestIssuedOrCompleted": false
+                }
+            ],
+            "givesQuest": true,
+            "questData": {
+                "questId": "heal_potions_test",
+                "title": "Подлатайся",
+                "description": "Найди эссенцию, чтобы не склеить ласты.",
+                "objectives": [
+                    {
+                        "type": 0,
+                        "targetId": "heal_potion",
+                        "targetNPCId": "",
+                        "requiredAmount": 1,
+                        "description": "Зеленая эссенция"
+                    }
+                ]
+            }
+        }
+    ]
+}
