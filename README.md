@@ -35,4 +35,4 @@
 
 1. Установить Unity требуемой версии.
 2. Клонировать репозиторий:
-   git clone https://github.com/<username>/<repo>.git
+   git clone git@github.com:VladimirSlayer/IronVeil.git
